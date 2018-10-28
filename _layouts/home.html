@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+
+<div class="home">
+  {% if site.theme_settings.header_text %}
+  <div id="main" class="call-out"
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_feature_image }}')">
+    {{ site.theme_settings.header_text }}
+  </div>
+  {% endif %}
+
+  <div class="grid-container">
+    <div class="col1">
+      {% include blog.html %}
+    </div>
+    <div class="col2">
+      <div id="archives">
+        <h3>Archieves</h3>
+        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+        {% for year in postsByYear %}
+          <h4>{{ year.name }}</h4>
+          {% for post in year.items %}
+            <article class="archive-item">
+              <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+            </article>
+          {% endfor %}
+        {% endfor %}
+
+        <h3>Categories</h3>
+        {% for category in site.categories %}
+          <div class="archive-group">
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <div id="#{{ category_name | slugize }}"></div>
+            <p></p>
+            
+            <h4 class="category-head">{{ category_name }}</h4>
+            <a name="{{ category_name | slugize }}"></a>
+            {% for post in site.categories[category_name] %}
+            <article class="archive-item">
+              <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+            </article>
+            {% endfor %}
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+  
+</div>

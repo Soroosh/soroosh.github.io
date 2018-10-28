@@ -1,0 +1,28 @@
+---
+layout: page
+title: "404 Page not found"
+permalink: /404.html
+bootstrap: true
+hide: true
+---
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8  col-lg-6 col-md-offset-2">
+            <h3>Error 404 page not found</h3>
+            <div class="jumbotron">
+                <h1 id="404" class="leftPad">2 x 2 x 101</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var i=0;
+    var text=["2 x 2 x 101", "2 x 202", "4 x 101"]
+
+    setInterval( function() {
+        i++;
+        i=i%text.length;
+        document.getElementById("404").innerHTML=text[i];
+      }, 3000 );
+</script>

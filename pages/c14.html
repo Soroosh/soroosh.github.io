@@ -1,0 +1,126 @@
+---
+layout: page
+title: C14
+permalink: /pages/c14
+---
+    
+<script type="text/javascript">
+  function rechne(){
+   monat=document.Geb.monat.options[document.Geb.monat.selectedIndex].value-1;
+   tag=1*document.Geb.tag.options[document.Geb.tag.selectedIndex].value;
+   jahr=1*document.Geb.jahr.value;
+   var time1;
+   var  gebtag=0; 
+   var dist=0;
+     jahr2=jahr;
+     if (jahr<1970){
+    document.getElementById("Now1").innerHTML="This site only works for dates after January 1st, 1970";
+    return;
+   /*    dist=1970-jahr;
+       gebtag=Math.floor(dist*365.25);
+       jahr=1970;*/
+     }
+     try{
+        time1=new Date(jahr, monat, tag, 12,0,0);
+     } catch(err){
+        // echo "Oops. Change date and try it again. <br /> ";
+        return;
+     }
+     datum=time1.getTime();
+     foo=new Date();
+     time2=foo.getTime()-time1+gebtag*86400000;
+     gebtag=Math.floor(time2/86400000);
+    monat++;
+    document.getElementById("Now1").innerHTML="Today is the " + foo.toLocaleDateString();
+      document.getElementById("Bday").innerHTML="Your birthday is the " + time1.toLocaleDateString();
+    document.getElementById("Intro").innerHTML="You are ";
+      str=addCommas(gebtag);
+      document.getElementById("Days").innerHTML= str + " days or";
+   document.getElementById("Weeks").innerHTML= Math.floor(gebtag/7) +" weeks or";
+   document.getElementById("Years").innerHTML= Math.floor(gebtag/365.25) +" years old";
+      sec=Math.ceil(time2/100000000);
+      sec=sec/10.00;
+      str=addCommas(sec);
+    document.getElementById("Seconds").innerHTML= "You've lived approximately "+str +" milion seconds";
+   hours=Math.floor(time2/360000000)/10.00; 
+   str=addCommas(hours);
+   document.getElementById("Hours").innerHTML= "or "+str+" thousand hours";
+   tmp=Math.ceil((time2)/86400000000)*1000;
+   rundtag=tmp*86400000-dist*365.25*86400000;
+   foo=new Date(rundtag+datum);
+      document.getElementById("EDay").innerHTML= "You'll become " + tmp+ " days old on " +foo.toLocaleDateString();
+   tmp=Math.ceil((time2)/60480000000)*100;
+   rundwoche=tmp*604800000-dist*365.25*86400000;
+   foo=new Date(rundwoche+datum);
+      document.getElementById("EWeek").innerHTML= "You'll become " + tmp+ " weeks old on " +foo.toLocaleDateString();
+  }
+  function addCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+</script>
+
+<div dir="ltr" style="text-align: left;">
+    <h2>How old are you?</h2>
+    Your birthday is the
+    
+    <form method="post" name="Geb">
+    <input maxlength="4" name="jahr" size="6" type="number" value="2001" onChange="rechne()" style="width:100px"/>-<select name="monat" size="0" onChange="rechne()">
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option selected="selected" value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+    </select>-<select name="tag" size="0" onChange="rechne()">
+    <option>1</option>
+    <option>2</option>
+    <option selected="selected">3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+    </select>
+    </form>
+    
+    </div>
+    <div id="Now1"></div>
+    <div id="Bday"></div>
+    <div id="Intro"></div>
+    <div id="Days"></div>
+    <div id="Weeks"></div>
+    <div id="Years"></div>
+    <div id="Seconds"></div>
+    <div id="Hours"></div>
+    
+    <div id="EDay"></div>
+    <div id="EWeek"></div>
