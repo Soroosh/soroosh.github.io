@@ -27,15 +27,15 @@ theme_settings:
   
   # Sharing options
   share_buttons:
-    facebook: 
-    twitter: 
+    facebook: true
+    twitter: true
     google_plus: 
-    tumblr:
-    pinterest:
-    pocket:
-    reddit: 
-    linkedin:
-    wordpress:
+    tumblr: true
+    pinterest: true
+    pocket: true
+    reddit: true
+    linkedin: true
+    wordpress: true
     email: true
 
   # Scripts / Features 
