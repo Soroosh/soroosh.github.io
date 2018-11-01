@@ -203,3 +203,28 @@ img[align=right] {
     .col2 {
         padding-left: 2em;
     }}
+
+@media screen and (min-width: $bs-break) {
+    h1 {
+        font-size:  48px;
+    }
+    
+    h2 {
+        font-size:  40px;
+    }
+    
+    h3 {
+        font-size:  32px;
+    }
+    
+    h4 {
+        font-size:  28px;
+        }
+    div,
+    b,
+    span,
+    p,
+    li {
+        font-size: 28px;
+    }
+}
