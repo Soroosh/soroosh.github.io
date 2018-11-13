@@ -112,16 +112,16 @@ function onceAMinute(){
 		minTime=msInDay,
 		maxTime=-msInDay;
 	for (var i in timesToday) {
-	var tmp = now-timesToday[i];
-	document.querySelector("."+i).classList.remove("bold");
-	if(tmp>maxTime&&tmp<0){
-		maxTime = tmp;
-		lastTime = i;
-	}
-	if(tmp<minTime&&tmp>0){
-		minTime = tmp;
-		nextTime = i;
-	}
+		var tmp = now-timesToday[i];
+		document.querySelector("."+i).classList.remove("bold");
+		if(tmp>maxTime&&tmp<0){
+			maxTime = tmp;
+			lastTime = i;
+		}
+		if(tmp<minTime&&tmp>0){
+			minTime = tmp;
+			nextTime = i;
+		}
 	}
 	document.querySelector("."+nextTime).classList.add("bold");
 	document.querySelector("."+lastTime).classList.add("bold");
@@ -159,15 +159,15 @@ function resetMinuteFunction(){
 }
 
 function setPosition(position) {
-	document.getElementById("lat").value(position.coords.latitude);
-	document.getElementById("lng").value(position.coords.longitude);
+	document.getElementById("lat").value = position.coords.latitude;
+	document.getElementById("lng").value = position.coords.longitude;
 	resetMinuteFunction();
 }
 
 (function() {
 	if (navigator.geolocation) {
-	navigator.geolocation.getCurrentPosition(setPosition);
-}
+		navigator.geolocation.getCurrentPosition(setPosition);
+	}
 	// document.querySelector("body").tooltip({ selector: '[data-toggle=tooltip]' });
 	document.getElementById("lat").addEventListener( "change", resetMinuteFunction );
 	document.getElementById("lng").addEventListener( "change", resetMinuteFunction );
