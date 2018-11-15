@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "A Moment Please"
+date:   2018-11-15 18:39:02 +0200
+categories: ["The Science Guy"]
+tags: [time]
+bootstrap: true
+excerpt_separator: <!--more-->
+---
+
+Have you ever been in that situation? Someone asks you: "What time is it?". 
+You start to answer: "It's 11, and 23 minutes", "...and 45 seconds, haha" you are made fun of for beeing precise.<br />
+
+One of my favorit watch faces on my smart watch is the fuzzy clock, where the approximate time is given.<!--more-->
+<div id="fuzzy" class="well"></div>
+<a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/fuzzyClock.js">source code</a><br/>
+
+From software developer side it is anoying to have year, month, day, hour, minute, and second all to describe, one thing, time. 
+Thank God we have unix time. 
+Unix time is a single value. 
+A number consisting of 64 ones and zeros to address all seconds from billions of years before the big bang up to billions of years from now.<br />
+
+While it's easy to develop software with unix time it's dificult for humans to do anything with it. 
+Wouldn't it be nice if we would could remove some clutter and have less parameter for time. 
+I have given it some thought and tried to come up with something for the time of the day.
+What I came up with is instead hour, minute and second just a single value. I call it moment. 
+240 moments are a day. So one hour is ten moments. 1 moment is 6 minutes. 
+In my experience if someone asks me to wait only five minutes or a moment, I usualy end up waiting 6. 
+Hence the name moment. Moments can also be used as fractions. 
+If someone does not need a moment she can ask for half a moment.<br />
+
+It turns out, I'm not the first who comes up with an alternative time unit named <a href="https://en.wikipedia.org/wiki/Moment_(time)">moment</a>. 
+Not even 240 for a day is something new (citation needed). 
+There have been many ideas and suggestions. 
+I like 240 moments for a day. It has advantages over 100 for a day. One is you can easily convert hour and minute to moments:
+11:30 is 115 moments - hours x 10, 30 minutes is 5 moments.
+The second advantage is 240 can be evenly divided by 3.
+So, you can for example say an adult should sleep one thir of a day or 80 moments.
+100 divided by 3 is 33.33333. Not so nice.
+
+<div id="moment" class="well"></div>
+<a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/moment.js">source code</a><br/>
+
+<script src="/assets/js/fuzzyClock.js"></script>
+<script src="/assets/js/moment.js"></script>
