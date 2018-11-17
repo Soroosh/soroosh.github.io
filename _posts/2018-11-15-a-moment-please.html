@@ -5,41 +5,52 @@ date:   2018-11-15 18:39:02 +0200
 categories: ["The Science Guy"]
 tags: [time]
 bootstrap: true
+feature-img: "assets/img/momentClock.jpg"
+thumbnail: "assets/img/momentClock.jpg"
+
 excerpt_separator: <!--more-->
 ---
 
-Have you ever been in that situation? Someone asks you: "What time is it?". 
-You start to answer: "It's 11, and 23 minutes", "...and 45 seconds, haha" you are made fun of for beeing precise.<br />
+<p>Have you ever been in that situation? Someone asks you: "What time is it?". 
+You start to answer: "It's 11, and 23 minutes", "...and 45 seconds, haha" you are made fun of for beeing precise.</p>
 
-One of my favorit watch faces on my smart watch is the fuzzy clock, where the approximate time is given.<!--more-->
-<div id="fuzzy" class="well"></div>
-<a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/fuzzyClock.js">source code</a><br/>
+<p>One of my favorit watch faces on my smart watch is the fuzzy clock, where the approximate time is given.</p><!--more-->
+<p><div id="fuzzy" class="well"></div>
+<small><a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/fuzzyClock.js">source code</a></small></p><br/>
 
-From software developer side it is anoying to have year, month, day, hour, minute, and second all to describe, one thing, time. 
+<p>From software developer side it is anoying to have year, month, day, hour, minute, and second all to describe, one thing, time. 
 Thank God we have unix time. 
-Unix time is a single value. 
-A number consisting of 64 ones and zeros to address all seconds from billions of years before the big bang up to billions of years from now.<br />
+<a href="https://en.wikipedia.org/wiki/Unix_timeunix">Unix time</a> is a single value. 
+A number consisting of 64 ones and zeros to address all seconds from billions of years before the big bang up to billions of years from now.</p>
 
-While it's easy to develop software with unix time it's dificult for humans to do anything with it. 
+<p>While it's easy to develop software with unix time it's dificult for humans to do anything with it. 
 Wouldn't it be nice if we would could remove some clutter and have less parameter for time. 
 I have given it some thought and tried to come up with something for the time of the day.
 What I came up with is instead hour, minute and second just a single value. I call it moment. 
 240 moments are a day. So one hour is ten moments. 1 moment is 6 minutes. 
-In my experience if someone asks me to wait only five minutes or a moment, I usualy end up waiting 6. 
+In my experience if someone asks me to wait just one moment, only five minutes not more, I usualy end up waiting 6. 
 Hence the name moment. Moments can also be used as fractions. 
-If someone does not need a moment she can ask for half a moment.<br />
+If someone does not need a moment she can ask for half a moment.</p>
 
-It turns out, I'm not the first who comes up with an alternative time unit named <a href="https://en.wikipedia.org/wiki/Moment_(time)">moment</a>. 
+<p>It turns out, I'm not the first who comes up with an alternative time unit named <a href="https://en.wikipedia.org/wiki/Moment_(time)">moment</a>. 
 Not even 240 for a day is something new (citation needed). 
 There have been many ideas and suggestions. 
-I like 240 moments for a day. It has advantages over 100 for a day. One is you can easily convert hour and minute to moments:
-11:30 is 115 moments - hours x 10, 30 minutes is 5 moments.
+I like 240 moments for a day. It has advantages over <a href="https://en.wikipedia.org/wiki/Hour#History">100 for a day</a>. One is you can easily convert hour and minute to moments:
+11:30 is 115 moments = hours x 10 + 30 minutes is 5 moments.
 The second advantage is 240 can be evenly divided by 3.
 So, you can for example say an adult should sleep one thir of a day or 80 moments.
-100 divided by 3 is 33.33333. Not so nice.
+100 divided by 3 is 33.33333. Not so nice.</p>
 
+<p>Don't confuse my moment time unit with <a href="https://en.wikipedia.org/wiki/24-hour_clock#Military_time">military time</a>. 
+Military time is horrible for a software developer. 
+In military time you can't  just add numbers. 1630 + 30 is not 1660. It's 1700.
+But in moments 165 + 5 is equal 170.
+It all works out.</p>
+
+<img src="/assets/img/momentClock.jpg" />
+<p>
 <div id="moment" class="well"></div>
-<a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/moment.js">source code</a><br/>
+<small><a href="https://github.com/Soroosh/soroosh.github.io/blob/master/assets/js/moment.js">source code</a></small></p><br/>
 
 <script src="/assets/js/fuzzyClock.js"></script>
 <script src="/assets/js/moment.js"></script>
