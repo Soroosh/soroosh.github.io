@@ -1,5 +1,6 @@
 (function(){
     const names = {
+        0: "twelve",
         1: "one",
         2: "two",
         3: "three",
@@ -11,12 +12,11 @@
         9: "nine",
         10: "ten",
         11: "eleven",
-        12: "twelve",
         15: "quarter",
         20: "twenty",
-        25: "twentyfive",
+        25: "twenty five",
         30: "half",
-        35: "twentyfive",
+        35: "twenty five",
         40: "twenty",
         45: "quarter",
         50: "ten",
