@@ -37,6 +37,17 @@
         {% endif %}
         {% endfor %} 
 
+        <!-- Auto Generation of SPECIAL pages in the navbar -->
+        {% for item in site.theme_settings.special_page %}
+          {% if item[1].enabled %}
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="{{ site.url }}{{ site.baseurl }}/{{ item[0] }}">
+                    <i class="fa fa-{{ item[1].icon }}" aria-hidden="true"></i>
+                </a>
+            </li>
+          {% endif %}
+        {% endfor %}
 
         <!-- External pages in the navbar -->
         {% for item in site.theme_settings.external_page %}
@@ -45,18 +56,6 @@
             <li>
                 <a class="clear" href="{{ item[1].url }}">
                     {{ item[1].name }}
-                </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-
-        <!-- Auto Generation of SPECIAL pages in the navbar -->
-        {% for item in site.theme_settings.special_page %}
-          {% if item[1].enabled %}
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" href="{{ site.url }}{{ site.baseurl }}/{{ item[0] }}">
-                    <i class="fa fa-{{ item[1].icon }}" aria-hidden="true"></i>
                 </a>
             </li>
           {% endif %}

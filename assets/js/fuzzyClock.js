@@ -24,7 +24,7 @@
     };
 
     function getFuzzyTime(minute, hour) {
-        const roundedMinutes = (Math.round(minute/5)*5)%60;
+        const roundedMinutes = Math.round(minute/5)*5;
         const fuzzyHour = roundedMinutes>30 ? (hour+1)%12 : (hour)%12;
         switch(roundedMinutes) {
             case 5:
@@ -49,7 +49,7 @@
         const now = new Date();
         const hour = now.getHours();
         const minute = now.getMinutes();
-        document.getElementById("fuzzy").textContent = getFuzzyTime(minute, hour);
+        document.getElementById("fuzzy").textContent = "It's " + getFuzzyTime(minute, hour);
     }
 
     getFuzzyTimeForNow();
