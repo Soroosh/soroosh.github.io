@@ -4,6 +4,13 @@ url: "https://soroosh.github.io/"
 title: Because We Code
 description: Code, Science, Math, Physics, Technology, Computer, and more # used by search engines
 
+defaults:
+  - 
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      image: assets/img/P.png # seo tag
+
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -18,18 +25,36 @@ theme_settings:
   header_feature_image: assets/img/computer.jpg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a><br />
-   Copyright Soroosh Pezeshki 2018 - <a href="/pages/disclaimer">Dislaimer</a> - <a href="/pages/privacy">Privacy policy</a>
+   Copyright Soroosh Pezeshki 2019 - <a href="/pages/disclaimer">Dislaimer</a> - <a href="/pages/privacy">Privacy policy</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
   email_address: "code@pezeshki.de"
   github: "soroosh"
-  
+  twitter: 
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  gitlab:
+  instagram:
+  keybase:
+  linkedin:  # Full URL
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  vimeo:
+  wordpress:
+  youtube:
+ 
   # Sharing options
   share_buttons:
     facebook: true
     twitter: true
-    google_plus: 
     tumblr: true
     pinterest: true
     pocket: true
@@ -101,4 +126,5 @@ sass:
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
 #theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png", "package.json", "node_modules", "gulpfile.js", ".idea/*"]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
