@@ -26,5 +26,6 @@ after_script:
 
 branches:
   only:
-    - master
+    - gh-pages
+    - main
     - /^v.*$/
