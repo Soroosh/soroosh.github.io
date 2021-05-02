@@ -13,25 +13,21 @@ figure {
   box-sizing: content-box;
 }
 
-pre {
-  overflow-x: scroll;
-}
-
 html {
-  background: $background-color;
+  background: var(--background);
 }
 
 // Typography
 ::selection {
-  background: $selection-color;
+  background: var(--selection);
 }
 
 ::-moz-selection {
-  background: $selection-color;
+  background: var(--selection);
 }
 
 body {
-  color: $text-color;
+  color: var(--text);
   font-family: $font-family-main;
   font-size: $font-size;
   word-wrap: break-word;
@@ -48,7 +44,7 @@ h6 {
   margin: 0.67em 0;
 
   a {
-    color: $text-color;
+    color: var(--text);
   }
 
 }
@@ -84,6 +80,8 @@ object,
 video {
   max-width: 100%;
   padding: 0 9%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img[align=left] {
@@ -126,12 +124,6 @@ img[align=right] {
   p, li, td {
     font-size: 0.8em;
   }
-  li li {
-    font-size: 0.95em;
-  }
-  li li * {
-    font-size: 1em;
-  }
 
   iframe,
   img,
@@ -170,7 +162,7 @@ img[align=right] {
     overflow-x: scroll;
   }
 }
-	
+
 @media screen and (min-width: $l-break) {
   h1 {
       font-size:  2.5rem;
@@ -193,11 +185,11 @@ img[align=right] {
 }
 
 blockquote {
-  border-left: 2px solid darken($blockquote-color, 20%);
+  border-left: 2px solid #9fd2e3;
   margin: 1em 1em;
   padding: 0.75em 1em;
-  background-color: $blockquote-color;
-  box-shadow: 0 2px 2px $border-color;
+  background-color: var(--blockquote);
+  box-shadow: 0 2px 2px var(--border);
 }
 
 blockquote *:last-child,
@@ -206,16 +198,16 @@ footer *:last-child {
 }
 
 table {
+  word-wrap: break-word;
   table-layout: fixed;
   width: 100%;
-  word-wrap: break-word;
   display: inline-block;
 }
 
 td,
 th {
   padding: 0.5em 1em;
-  border: 1px solid $border-color;
+  border: 1px solid var(--border);
   text-align: left;
 }
 
@@ -252,6 +244,7 @@ dl,
 // Lists within lists
 li {
   p {
+    font-size: inherit;
     display: inline;
   }
 
@@ -270,13 +263,13 @@ ul {
 
 hr {
   border: 0;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid #fff;
   margin: 1em 0;
 }
 
 a {
-  color: $link-color;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -294,6 +287,8 @@ kbd {
   white-space: nowrap;
 }
 
+// CUSTOM CSS
+
 .dark-background {
   background-color: #999;
 }
@@ -310,4 +305,13 @@ kbd {
 
 .card .card-body a {
   color: #337ab7;
+}
+
+html[data-theme="dark"] {
+  .bootstrap-iso input,
+  .dark-background,
+  .input-background,
+  .bootstrap-iso .card-header {
+   background-color: #000;
+ }
 }
