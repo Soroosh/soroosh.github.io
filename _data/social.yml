@@ -1,40 +1,15 @@
-# Icons on the footer
-rss: true
-email_address: "contact@good-gui.de"   # Full email address, e.g. "sam@example.com"
-behance:
-bitbucket:
-dribbble:
-facebook:
-flickr:
-gitlab:
-github: "soroosh"
-instagram:
-keybase:
-linkedin:         # Full URL
-pinterest:
-reddit:
-soundcloud:
-stack_overflow:
-stack_exchange:   # Full URL
-steam:
-tumblr:
-twitter: "soroooosh"         # "twitter username"
-vimeo:
-wordpress:
-youtube:  UC2jpfD1Ep5nOBPM_FZn97jw        # Youtube channel token like: UCqECaJ8Gagnn7YCbPEzWH6g
-
 # rss specify feed path
 feed:
   path: feed.xml
 
 # Share button options
 share:
-  facebook: true
+  email: true
   twitter: true
-  tumblr: true
-  pinterest: 
-  pocket: true
-  reddit: true
   linkedin: true
   wordpress: true
-  email: true
+  reddit: true
+  tumblr: true
+  facebook: true
+  pinterest:
+  pocket: true
