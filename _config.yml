@@ -3,10 +3,10 @@ baseurl: ""
 url: "https://soroosh.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Because We Code
+title: Good-GUI.de
 description: Code, Science, Math, Physics, Technology, Computer, and more # used by search engines
-avatar: assets/img/P_.jpg                         # Empty for no avatar in navbar
-favicon: assets/img/P_.jpg                             # Icon displayed in the tab
+avatar: assets/img/code_science.webp                   # Empty for no avatar in navbar
+favicon: assets/img/code_science.webp                  # Icon displayed in the tab
 
 # Header and footer text
 header_text: <p>A DIY Tech Blog</p>  # Change Blog header text
@@ -14,7 +14,7 @@ header_feature_image: assets/img/computer.jpg
 footer_text: >
   <b>If you enjoy this blog, also visit <a href="https://www.pezeshki.de/">pezeshki.de</a></b><br /><br />
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a><br />
-  Copyright Soroosh Pezeshki 2020 - <a href="/pages/disclaimer">Dislaimer</a> - <a href="/pages/privacy">Privacy policy</a>
+  Copyright Soroosh Pezeshki 2021 - <a href="/pages/disclaimer">Dislaimer</a> - <a href="/pages/privacy">Privacy policy</a>
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
@@ -26,9 +26,15 @@ katex: true                                             # Enable if using math m
 mermaid: true                                           # Enable mermaid-js for sequence and diagrams
 google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
 cookie_consent: false                                   # To respect the usage of cookies
-disqus_shortname:                                       # Your discus shortname for comments
-cusdis_app_id:                                          # Your cusdis data-app-id
 color_theme: auto                                       # auto, dark or light
+
+# Comments
+comments:
+  disqus_shortname:                                     # Your discus shortname for comments
+  cusdis_app_id:                                        # Your cusdis data-app-id
+  utterances:                                           # Enable by filling below information. For more info, go to https://utteranc.es
+    repo:                                               # your public comments repository (e.g. owner/repo)
+    issue-term:                                         # Issue term (e.g. "comment" consider issues with this word in the title as comments)
 
 # PAGINATION
 paginate: 10
@@ -41,9 +47,10 @@ collections:
     permalink: /:collection/:name
 
 # BUILD SETTINGS
+sass:
+  style: compressed
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
-exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
-          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
+exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
 
 # theme: type-on-strap                                  # if using the theme as a jekyll theme gem
 remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github

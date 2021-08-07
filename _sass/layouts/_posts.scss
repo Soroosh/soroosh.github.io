@@ -1,6 +1,6 @@
 .comments {
   @extend %padding-post;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   float: left;
   width: 100%;
 }
@@ -61,10 +61,11 @@ header {
   border-radius: 1em;
   padding-right: 0.5em;
   display: inline-flex;
-  
+
   a {
     display: flex;
     align-items: center;
+
     img {
       height: auto;
     }
@@ -124,15 +125,15 @@ header {
   }
 
   @media screen and (min-width: $break) {
-    background-size: 100% auto;
+    background-size: 120% auto;
   }
 
   @media screen and (max-width: $break) {
-    background-size: 100% auto;
+    background-size: 200% auto;
   }
 
   @media screen and (max-width: $sm-break) {
-    background-size: 100% auto;
+    background-size: 400% auto;
   }
 }
 
@@ -145,11 +146,8 @@ header {
   h6 { color: var(--h6); }
 
   a {
-    color: inherit;
-    filter: hue-rotate(20deg);
-
     :visited {
-      filter: saturate(0.7);  
+      filter: saturate(0.7);
     }
   }
 }

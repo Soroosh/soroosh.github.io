@@ -8,7 +8,6 @@
     {% endif %}
     <p class="meta">
       {% if author.name %}{{ author.name }} - {% endif %}
-      {% assign x = date | date: "%m" | minus: 1 %}
       {{ date | date: "%Y-%m-%d" }}
     </p>
   {%- if author.url -%}</a>{%- endif -%}
