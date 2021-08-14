@@ -5,8 +5,8 @@ url: "https://soroosh.github.io/"
 # THEME-SPECIFIC CONFIGURATION
 title: Good-GUI.de
 description: Code, Science, Math, Physics, Technology, Computer, and more # used by search engines
-avatar: assets/img/code_science.webp                   # Empty for no avatar in navbar
-favicon: assets/img/code_science.webp                  # Icon displayed in the tab
+avatar: assets/img/code_s.webp                   # Empty for no avatar in navbar
+favicon: assets/img/code_s.webp                  # Icon displayed in the tab
 
 # Header and footer text
 header_text: <p>A DIY Tech Blog</p>  # Change Blog header text
@@ -14,7 +14,7 @@ header_feature_image: assets/img/computer.jpg
 footer_text: >
   <b>If you enjoy this blog, also visit <a href="https://www.pezeshki.de/">pezeshki.de</a></b><br /><br />
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a><br />
-  Copyright Soroosh Pezeshki 2021 - <a href="/pages/disclaimer">Dislaimer</a> - <a href="/pages/privacy">Privacy policy</a>
+  Copyright Soroosh Pezeshki 2021 - <a href="/pages/disclaimer">Disclaimer</a> - <a href="/pages/privacy">Privacy policy</a>
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
