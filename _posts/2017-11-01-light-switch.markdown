@@ -12,7 +12,7 @@ Smart bulbs and lights are a dream for hackers. There are light switches availab
 *  Two buttons, two LEDs, resistances, cables, optionally a board
 
 Wire the one button to GPIO 35 and one to 37 and one LED to 38 and one to 40.
-![Board design](/assets/img/LightSwitchSmall.png "Board design")
+![Board design](/assets/img/posts/LightSwitchSmall.png "Board design")
 
 The following python script does the job for the Philips Hue system
 {% highlight python linenos%}
