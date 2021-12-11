@@ -100,3 +100,32 @@ a.button {
 .right {
   float: right;
 }
+
+.table-cell,
+.table-align-wide>label.table-cell,
+.table-align-wide>span.table-cell,
+.table-row>label.table-cell,
+.table-row>span.table-cell,
+.table-row>input.table-cell {
+  display:table-cell; 
+  padding-right: 8px; 
+}
+.table-align {
+  max-width: 500px;
+  display: table;
+}
+.table-align-wide {
+  max-width: 600px;
+  min-width: 400px;
+  display: table;
+}
+.table-row {
+  display: table-row;
+}
+.error-hint {
+  color: red;
+  font-size: small;
+}
+.alternating-table>.table-row:nth-child(even){
+  background-color: #eee;
+}

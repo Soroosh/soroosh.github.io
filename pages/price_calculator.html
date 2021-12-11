@@ -1,0 +1,118 @@
+---
+layout: page
+title: "Prices"
+permalink: /pages/price-calculator
+bootstrap: false
+---
+<h3>Price Calculator</h3>
+<p>
+    Do you have used items, that you want to sell but don't know what price tag to put on?
+    Here, you can calculate a suggested price.
+    The item should still be functional.
+    The calculated price here is a suggested price.
+    There is no guaranty, that it is the best price.
+</p>
+
+<div class="table-align">
+    <div class="table-row">
+        <div class="table-cell">
+            <label for="newPrice">Original price:</label>
+        </div>
+        <div class="table-cell">
+            <input type="number" onchange="calculatePrice()" id="newPrice" size=15>
+            <span id="newPrice-error" class="error" role="alert"></span>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell">
+            <label for="age">Age in years:</label>
+        </div>
+        <div class="table-cell">
+            <input type="number" onchange="calculatePrice()" id="age" size=15>
+            <span id="age-error" class="error" role="alert"></span>
+        </div>
+    </div>
+    <div class="table-row">
+        <div class="table-cell">
+            <label for="category">Category:</label>
+        </div>
+        <div class="table-cell">
+            <input type="radio" id="furniture" name="category" onchange="changeDevaluation(19)" value="19">
+            <label for="furniture">Furniture</label><br>
+            <input type="radio" id="elec" name="category" onchange="changeDevaluation(9)" value="9">
+            <label for="elec">Major appliance</label><br>
+            <input type="radio" id="cElec" name="category" onchange="changeDevaluation(5)" value="5">
+            <label for="cElec">Consumer electronic</label> <br>
+            <input type="radio" id="other" name="category" onchange="enableCustom()">
+            <label for="other">Custom</label>
+            <input type="number" onchange="calculatePrice()" id="devaluation" disabled size=6
+                aria-label="Devaluation period in years" aria-live="off">
+            <span id="devaluation-error" class="error" role="alert"></span><br>
+        </div>
+    </div>
+</div>
+<br>
+<div id="suggestedPrice" role="alert"></div>
+<br><br><br>
+<p>
+    The equation we use here to calculate the price is:
+    $$
+        p = n (1 - log_2(\frac{a}{d} + 1))
+    $$
+    with
+    new price <i>n</i>, age in years <i>a</i>, and loss in value parameter <i>d</i>.
+    The loss in value parameter is here the time in years it takes a new item to reach a price 0.
+    This should depend on the category of item you want to sell.
+    A chair will not lose value as fast as a cell phone.
+    It also depends on build quality and if the item was well maintained.
+    The values that are used here are rough averages.
+    For a specific case, <i>d</i> can be set in the "Custom" category.
+
+</p>
+<script>
+    getAndParseValue = function (id) {
+        const value = document.getElementById(id).value;
+        if (value == null || value == "") {
+            return null;
+        }
+        const errorElement = document.getElementById(id + "-error");
+        const number = parseFloat(value.replace(",", "."));
+        if (isNaN(number) || number < 0) {
+            errorElement.innerHTML = "<br>Error - only positive decimal numbers are valid";
+            return null;
+        }
+        if (errorElement.innerText != "") {
+            errorElement.innerHTML = "";
+        }
+        return number;
+    }
+
+    calculatePrice = function () {
+        const devaluation = getAndParseValue("devaluation");
+        const newPrice = getAndParseValue("newPrice");
+        const age = getAndParseValue("age");
+
+        if (devaluation == null || age == null || newPrice == null) {
+            return;
+        }
+        let suggestedPrice;
+        if (age >= devaluation) {
+            suggestedPrice = 0;
+        } else {
+            suggestedPrice = newPrice * (1.0 - Math.log2(age / devaluation + 1.0));
+        }
+        const intl = new Intl.NumberFormat('en-US', { "maximumFractionDigits": 2, "minimumFractionDigits": 2 });
+        document.getElementById("suggestedPrice").innerHTML = "Suggested price: " + intl.format(suggestedPrice);
+    }
+
+    enableCustom = function () {
+        document.getElementById("devaluation").removeAttribute("disabled");
+    }
+
+    changeDevaluation = function (value) {
+        const element = document.getElementById("devaluation");
+        element.value = value;
+        element.setAttribute("disabled", true);
+        calculatePrice();
+    }
+</script>
