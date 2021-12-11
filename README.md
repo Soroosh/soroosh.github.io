@@ -1,4 +1,4 @@
-# Good-GUI.de
+# good-gui.de
 
 A DIY tech blog
 

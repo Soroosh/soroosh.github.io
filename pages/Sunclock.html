@@ -12,10 +12,10 @@ Time: <span id="time" class="bold"></span><br /><br />
     <b>Sunrise clock</b><br />
     Sunrise: <span id="sunrise1">...</span>,
     <span id="sunrise2">...</span>
-    <div class="card">
-        <div class="card-header">
-            <span class="toolTipped tooltips" data-toggle="tooltip" title="The day starts with sunrise.">Sunrise clock:</span>
-            <span class="bold" id="sunriseClock" style="float: right;">...</span>
+    <div class="card table-align">
+        <div class="card-header table-align-wide">
+            <label for="sunriseClock" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="The day starts with sunrise.">Sunrise clock:</label>
+            <span class="bold table-cell right" id="sunriseClock" >...</span>
         </div>
     </div>
 </div>
@@ -23,99 +23,103 @@ Time: <span id="time" class="bold"></span><br /><br />
     <b>Sunset clock</b><br />
     Sunset: <span id="sunset1">...</span>,
     <span id="sunset2">...</span>
-    <div class="card">
-        <div class="card-header">
-            <span class="toolTipped tooltips" data-toggle="tooltip" title="The day starts with sunset.">Sunset clock:</span>
-            <span class="bold" id="sunsetClock" style="float: right;">...</span>
+    <div class="card table-align">
+        <div class="card-header table-align-wide">
+            <label for="sunsetClock" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="The day starts with sunset.">Sunset clock:</label>
+            <span class="bold table-cell right" id="sunsetClock" >...</span>
         </div>
     </div>
 </div>
 
 <br />
-<div>
-    <b>Significant moments on <span id="today">.</span></b><br />
-    <div class="nadir">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Darkest moment of the night, sun is in the lowest position">
+<b>Significant moments on <span id="today">.</span></b><br />
+<div class="alternating-table table-align-wide">
+    <div class="nadir table-row">
+        <label for="nadir" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Darkest moment of the night, sun is in the lowest position">
             Solar midnight:
-        </span>
-        <span class="keepRight" id="nadir" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="nadir">...</span>
     </div>
-    <div class="nightEnd">
-        Astronomical dawn:
-        <span class="keepRight" id="nightEnd" style="float: right;">...</span>
+    <div class="nightEnd table-row">
+        <label for="nightEnd" class="table-cell">Astronomical dawn:</label>
+        <span class="table-cell" id="nightEnd">...</span>
     </div>
-    <div class="nauticalDawn">
-        Nautical dawn:
-        <span class="keepRight" id="nauticalDawn" style="float: right;">...</span>
+    <div class="nauticalDawn table-row">
+        <label for="nauticalDawn" class="table-cell">Nautical dawn:</label>
+        <span class="table-cell" id="nauticalDawn">...</span>
     </div>
-    <div class="dawn">
-        Civil dawn:
-        <span class="keepRight" id="dawn" style="float: right;">...</span>
+    <div class="dawn table-row">
+        <label for="dawn" class="table-cell">Civil dawn:</label>
+        <span class="table-cell" id="dawn">...</span>
     </div>
-    <div class="sunrise">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Top edge of the sun appears on the horizon">
+    <div class="sunrise table-row">
+        <label for="sunrise" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Top edge of the sun appears on the horizon">
             Sunrise begin:
-        </span>
-        <span class="keepRight" id="sunrise" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="sunrise">...</span>
     </div>
-    <div class="sunriseEnd">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Bottom edge of the sun touches the horizon">
+    <div class="sunriseEnd table-row">
+        <label for="sunriseEnd" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Bottom edge of the sun touches the horizon">
             Sunrise end:
-        </span>
-        <span class="keepRight" id="sunriseEnd" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="sunriseEnd">...</span>
     </div>
-    <div class="goldenHourEnd">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Soft light, best time for photography">
+    <div class="goldenHourEnd table-row">
+        <label for="goldenHourEnd" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Soft light, best time for photography">
             Morning golden hour end:
-        </span>
-        <span class="keepRight" id="goldenHourEnd" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="goldenHourEnd" >...</span>
     </div>
-    <div class="solarNoon">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Sun is in the highest position">
+    <div class="solarNoon table-row">
+        <label for="solarNoon" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Sun is in the highest position">
             Solar noon:
-        </span>
-        <span class="keepRight" id="solarNoon" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="solarNoon" >...</span>
     </div>
-    <div class="goldenHour">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Soft light, best time for photography">
+    <div class="goldenHour table-row">
+        <label for="goldenHour" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Soft light, best time for photography">
             Evening golden hour begin:
-        </span>
-        <span class="keepRight" id="goldenHour" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="goldenHour" >...</span>
     </div>
-    <div class="sunsetStart">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Bottom edge of the sun touches the horizon">
+    <div class="sunsetStart table-row">
+        <label for="sunsetStart" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Bottom edge of the sun touches the horizon">
             Sunset begin:
-        </span>
-        <span class="keepRight" id="sunsetStart" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="sunsetStart" >...</span>
     </div>
-    <div class="sunset">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Sun disappears below the horizon, evening civil twilight starts">
+    <div class="sunset table-row">
+        <label for="sunset" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Sun disappears below the horizon, evening civil twilight starts">
             Sunset end:
-        </span>
-        <span class="keepRight" id="sunset" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="sunset" >...</span>
     </div>
-    <div class="dusk">
-        Civil dusk:
-        <span class="keepRight" id="dusk" style="float: right;">...</span>
+    <div class="dusk table-row">
+        <label for="dusk" class="table-cell" >Civil dusk:</label>
+        <span class="table-cell" id="dusk" >...</span>
     </div>
-    <div class="nauticalDusk">
-        Nautical dusk:
-        <span class="keepRight" id="nauticalDusk" style="float: right;">...</span>
+    <div class="nauticalDusk table-row">
+        <label for="nauticalDusk" class="table-cell" >Nautical dusk:</label>
+        <span class="table-cell" id="nauticalDusk" >...</span>
     </div>
-    <div class="night">
-        <span class="toolTipped tooltips" data-toggle="tooltip" title="Dark enough for astronomical observations">
+    <div class="night table-row">
+        <label for="night" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Dark enough for astronomical observations">
             Astronomical dusk:
-        </span>
-        <span class="keepRight" id="night" style="float: right;">...</span>
+        </label>
+        <span class="table-cell" id="night" >...</span>
     </div>
 </div>
 
 <br />
-<div>
-    <span class="toolTipped tooltips" data-toggle="tooltip" title="Negative for West">Longitude:</span>
-    <input type="text" id="lng" value="10.0" />
-    <span class="toolTipped tooltips" data-toggle="tooltip" title="Negative for South">Latitude:</span>
-    <input type="text" id="lat" value="53.6" />
+<div class="table-align-wide">
+    <div class="table-row">
+        <label for="lng" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Negative for West">Longitude:</label>
+        <input type="text" id="lng" value="10.0" class="table-cell right" size="12"/>
+    </div>
+    <div class="table-row">
+        <label for="lat" class="toolTipped tooltips table-cell" data-toggle="tooltip" title="Negative for South">Latitude:</label>
+        <input type="text" id="lat" value="53.6" class="table-cell right" size="12"/>
+    </div>
 </div>
 
 <br /><br />

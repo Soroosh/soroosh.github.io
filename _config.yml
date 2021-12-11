@@ -3,7 +3,7 @@ baseurl: ""
 url: "https://soroosh.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Good-GUI.de
+title: good-gui.de
 description: Code, Science, Math, Physics, Technology, Computer, and more # used by search engines
 avatar: assets/img/code_s.webp                   # Empty for no avatar in navbar
 favicon: assets/img/code_s.webp                  # Icon displayed in the tab
