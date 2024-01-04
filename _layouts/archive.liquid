@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+<div class="home">
+    <div id="categories">
+        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+        {% for year in postsByYear %}
+            <div class="category-group">
+                <h4 id="archive-{{year.name}}" class="title">{{ year.name }}</h4>
+                <div class="items">
+                    {% for post in year.items %}
+                        <a href="{{ post.url | relative_url }}" class="category-post-link">
+                            <div class="item">
+                                <p class="meta">{{ post.date | date: site.data.language.str_date_format }}</p>
+                                <p class="title">{{ post.title }}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

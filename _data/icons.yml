@@ -1,24 +1,23 @@
-# Icons on the footer
-mail:  "contact@pezeshki.de"
-github:  Soroosh
-twitter:  "soroooosh"
-youtube:  UC2jpfD1Ep5nOBPM_FZn97jw 
-medium:  Soroooosh
-google-scholar:   W3hX5L0AAAAJ
+# For the Icons on the footer of the website
+# For the Share buttons at the end of the articles, use the "social.yml"
 behance:
 bitbucket:
 calendly:
 dribbble:
 facebook:
 flickr:
+github: Soroosh
 gitlab:
+google-scholar: W3hX5L0AAAAJ
 instagram:
 hacker-news:
 keybase:
 linkedin:
+mail: "contact@pezeshki.de"
 map:              # e.g. "34.0886/-118.3191"
-mastodon:         # e.g. "fostodon.org/@sam"
+mastodon: "mastodon.online/@sope"
 matrix:           # e.g. "@sam:matrix.org"
+medium: Soroooosh
 patreon:
 phone:            # e.g. "+11111111111"
 pinterest:
@@ -31,6 +30,8 @@ steam:
 telegram:
 tumblr:
 twitch:
+twitter:
 vimeo:
 vk:
 wordpress:
+youtube: UC2jpfD1Ep5nOBPM_FZn97jw

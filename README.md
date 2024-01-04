@@ -16,17 +16,17 @@ build with `bundle exec jekyll build`
 
 ### in /data
 * restore authors.yml and social.yml
+* change dateformat in language.yml
 
 ### in /includes
 * adapt date in blog/post_info.html
 
 ### in /layouts
-* add archive and categories to home.html
 * Add story.html 
 
 ### in /_sass
 * add css to base/_global.scss
-* adapt .site-header padding and avatar size in includes/_navbar.scss
+* add custom css in base/_utility.scss
 * Remove the hero image scaling in layouts/_posts.scss and layouts/_blog.scss
 
 ### in /assets

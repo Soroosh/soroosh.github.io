@@ -60,14 +60,6 @@ h4 {
   font-size: 1.15em;
 }
 
-.grid-container {
-  padding: 10px;  
-}
-
-.grid-container.two-col {
-  padding: 10px;  
-}
-
 iframe,
 img,
 embed,
@@ -87,22 +79,25 @@ img[align=right] {
   margin-left: 3%;
 }
 
+summary {
+  cursor: pointer;
+}
+
 /* ---- Responsive ---- */
 
 @media screen and (min-width: $m-break) {
   .grid-container {
-      display: grid;
-      grid-template-columns: auto 33%;
-      grid-gap: 25px;
+    display: grid;
+    grid-template-columns: auto 33%;
+    grid-gap: 25px;
   }
-  
+
   .grid-container.two-col {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      grid-gap: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 25px;
   }
 }
-
 @media screen and (max-width: $break) {
   h1 {
     font-size: 2em;
@@ -160,31 +155,31 @@ img[align=right] {
 
 @media screen and (min-width: $l-break) {
   h1 {
-      font-size:  2.5rem;
+    font-size: 2.5rem;
   }
 
   h2 {
-      font-size:  2rem;
+    font-size: 2rem;
   }
 
   h3 {
-      font-size:  1.7r5em;
+    font-size: 1.7r5em;
   }
 
   h4 {
-      font-size:  1.5rem;
-      }
+    font-size: 1.5rem;
+  }
+
   body {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
-
 blockquote {
   border-left: 2px solid #9fd2e3;
   margin: 1em 1em;
   padding: 0.75em 1em;
   background-color: var(--blockquote);
-  box-shadow: 0 2px 2px var(--border);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 blockquote *:last-child,
@@ -225,6 +220,7 @@ p,
 ol,
 ul,
 dl,
+details,
 .math-display {
   line-height: 1.5;
   margin-bottom: 1em;
@@ -276,6 +272,17 @@ kbd {
   white-space: nowrap;
 }
 
+details {
+  & > summary {
+    cursor: pointer;
+    display: list-item;
+  }
+
+  &[open] > summary {
+    color: var(--link);
+  }
+}
+
 // Cookie consent
 #cookie-notice {
   padding: 0.5rem 1rem;
@@ -287,39 +294,27 @@ kbd {
   background: rgba(2, 2, 2, 0.85);
   color: lightgray;
   z-index: 1000;
-}
 
-#cookie-notice a {
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 0.6rem;
-}
-
-/* Vendor tweaks */
-// For correct line number width in Github Gists
-.gist table tbody tr td {
-  box-sizing: content-box;
-}
-
-// KaTeX math display
-.math-display {
-  display: inline-block;
-  width: 100%;
+  & a {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.6rem;
+  }
 }
 
 // Mermaid
 .mermaid {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 2%;
-}
 
-.mermaid > svg {
-  margin: auto;
-  display: block;
-  height: auto;
-  padding-bottom: 2em;
-  padding-top: 2em;
-  max-width: 100%;
+  & > svg {
+    margin: auto;
+    display: block;
+    height: auto;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    max-width: 100%;
+  }
 }
 
 // CUSTOM CSS
@@ -327,12 +322,14 @@ kbd {
 .dark-background {
   background-color: #999;
 }
+
 .text-right {
   text-align: right;
 }
 
 .image-caption {
   text-align: center;
+
   em {
     color: grey;
   }
@@ -343,10 +340,11 @@ kbd {
 }
 
 html[data-theme="dark"] {
+
   .bootstrap-iso input,
   .dark-background,
   .input-background,
   .bootstrap-iso .card-header {
-   background-color: #000;
- }
+    background-color: #000;
+  }
 }

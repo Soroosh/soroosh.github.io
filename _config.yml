@@ -11,10 +11,11 @@ favicon: assets/img/code_s.webp                  # Icon displayed in the tab
 # Header and footer text
 header_text: <p>A DIY Tech Blog</p>  # Change Blog header text
 header_feature_image: assets/img/computer.jpg
+header_feature_image_responsive: true
 footer_text: >
   <b>If you enjoy this blog, also visit <a href="https://www.pezeshki.de/">pezeshki.de</a></b><br /><br />
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a><br />
-  Copyright Soroosh Pezeshki 2021 - <a href="/pages/disclaimer">Disclaimer</a> - <a href="/pages/privacy">Privacy policy</a>
+  Copyright Soroosh Pezeshki 2024 - <a href="/pages/disclaimer">Disclaimer</a> - <a href="/pages/privacy">Privacy policy</a>
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
@@ -50,7 +51,7 @@ collections:
 sass:
   style: compressed
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
-exclude: [".jekyll-cache", ".idea", "vendor/*", "assets/node_modules/*"]
+exclude: [".jekyll-cache", ".jekyll-metadata", ".idea", "vendor/*", "assets/node_modules/*", ".vscode"]
 
 # theme: type-on-strap                                  # if using the theme as a jekyll theme gem
 remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github

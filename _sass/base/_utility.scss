@@ -68,13 +68,13 @@ a.button {
     border: 1px solid var(--link);
     color: var(--background);
     text-decoration: none;
+    filter: none;
   }
 }
 
 .body-link {
   &:hover {
     text-decoration: underline;
-    color: var(--link);
     filter: brightness(0.85);
   }
 }
@@ -83,7 +83,6 @@ a.button {
   &:hover {
     text-decoration: none;
     color: var(--link);
-    filter: brightness(1.1);
   }
 }
 
@@ -101,31 +100,38 @@ a.button {
   float: right;
 }
 
+// CUSTOM CSS
+
 .table-cell,
 .table-align-wide>label.table-cell,
 .table-align-wide>span.table-cell,
 .table-row>label.table-cell,
 .table-row>span.table-cell,
 .table-row>input.table-cell {
-  display:table-cell; 
-  padding-right: 8px; 
+  display: table-cell;
+  padding-right: 8px;
 }
+
 .table-align {
   max-width: 500px;
   display: table;
 }
+
 .table-align-wide {
   max-width: 600px;
   min-width: 400px;
   display: table;
 }
+
 .table-row {
   display: table-row;
 }
+
 .error-hint {
   color: red;
   font-size: small;
 }
-.alternating-table>.table-row:nth-child(even){
+
+.alternating-table>.table-row:nth-child(even) {
   background-color: #eee;
 }
